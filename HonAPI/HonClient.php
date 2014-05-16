@@ -34,4 +34,14 @@ class HonClient
 	 {
 		return new HeroStats($this->token);
 	 }
+
+	 /**
+	  * Start a Match History call
+	  *
+	  * @return HonAPI\MatchHistory
+	  */ 
+	 public function getMatchHistory()
+	 {
+		return new MatchHistory($this->token);
+	 }
 }

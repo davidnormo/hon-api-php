@@ -78,8 +78,7 @@ class Request
 	 {
 		//build the request URI
 		$requestUri = $this->buildRequestUri(); 
-		echo $requestUri;
 		//send request, return response
-		//return file_get_contents($requestUri);
+		return file_get_contents($requestUri);
 	 }
 }
