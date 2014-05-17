@@ -8,5 +8,6 @@ class PlayerStats extends Request
 	 {	
 		  parent::__construct($token);
 		  $this->setController('player_statistics');
+		  $this->setMethod('ranked');
 	 }
 }
