@@ -10,3 +10,22 @@ $client = new HonClient();
 $client->getPlayerStats()
 	   ->byNickname('testor3');
 ```
+
+## Roadmap
+
+1.0.x
+	- Finish API: 
+		- Match
+		- Multi-Match
+		- Heroes 
+		- Items
+	- Add Error/Exception handling
+
+1.1.x
+	- Add response objects:
+		- Player Statistics
+		- Hero Statistics
+		- Match History
+		- Match
+		- Hero
+		- Item

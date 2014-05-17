@@ -1,6 +1,5 @@
 <?php
 namespace HonAPI;
-use HonAPI\PlayerStats;
 class HonClient
 {
 	 private $token;
@@ -43,5 +42,15 @@ class HonClient
 	 public function getMatchHistory()
 	 {
 		return new MatchHistory($this->token);
+	 }
+	 	
+	 /**
+	  * Start a Match call
+	  *
+	  * @return HonAPI\Match
+	  */
+	 public function getMatch()
+	 {
+		return new Match($this->token);
 	 }
 }

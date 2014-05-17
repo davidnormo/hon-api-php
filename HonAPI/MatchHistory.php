@@ -8,5 +8,6 @@ class MatchHistory extends Request
 	 {	
 		  parent::__construct($token);
 		  $this->setController('match_history');
+		  $this->setMethod('ranked');
 	 }
 }
