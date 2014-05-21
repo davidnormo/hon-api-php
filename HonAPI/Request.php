@@ -49,8 +49,8 @@ class Request
 	  */
 	 public function setProperty($key, $value)
 	 {
-		$this->properties[urlencode($key)] = urlencode($value);
-		return $this;
+		  $this->properties[urlencode($key)] = urlencode($value);
+		  return $this;
 	 }
 
 	 /**
@@ -60,13 +60,13 @@ class Request
 	  */
 	 private function buildRequestUri()
 	 {
-		$requestUri = $this->baseUrl . '/' . $this->controller . '/' . $this->method . '/';
-		foreach($this->properties as $key => $value){
-			$requestUri .=  $key . '/' . $value . '/';
-		}
-		$requestUri .= '?token='.$this->token;
-	
-		return $requestUri;
+		  $requestUri = $this->baseUrl . '/' . $this->controller . '/' . $this->method . '/';
+		  foreach($this->properties as $key => $value){
+			   $requestUri .=  $key . '/' . $value . '/';
+		  }
+		  $requestUri .= '?token='.$this->token;
+
+		  return $requestUri;
 	 }
 
 	 /**
@@ -76,10 +76,23 @@ class Request
 	  */
 	 public function fetch()
 	 {
-		//build the request URI
-		$requestUri = $this->buildRequestUri(); 
-		//send request, return response
-		//return file_get_contents($requestUri);
-		echo $requestUri;
+		  //build the request URI
+		  $requestUri = $this->buildRequestUri(); 
+		  //send request, return response
+		  //return file_get_contents($requestUri);
+		  echo $requestUri;
+	 }
+
+	 /**
+	  * Class properties getters
+	  */
+	 public function getProperties()
+	 {
+		  return $this->properties;
+	 }
+	 	
+	 public function getMethod()
+	 {
+		return $this->method;
 	 }
 }

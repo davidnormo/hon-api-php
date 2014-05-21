@@ -11,6 +11,9 @@ $client->getPlayerStats()
 	   ->byNickname('testor3');
 ```
 
+## Unit Tests
+The unit tests are located in the `tests/` dir. Runing `$ ./test` from the project root directory will run the unit tests.
+
 ## Roadmap
 
 1.0.x

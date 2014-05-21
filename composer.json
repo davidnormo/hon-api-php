@@ -1,0 +1,17 @@
+{
+	 "name": "davidnormo/hon-api-php",
+		  "description": "A library for the HoN Statistics API",
+		  "license": "MIT",
+		  "authors": [
+		  {
+			   "name": "David Normington",
+			   "email": "david.normo@gmail.com"
+		  }
+	 ],
+		  "require": {
+
+		  },
+		  "require-dev": {
+			   "phpunit/phpunit": "4.1.0"
+		  }
+}
