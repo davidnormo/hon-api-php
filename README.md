@@ -16,19 +16,19 @@ The unit tests are located in the `tests/` dir. Runing `$ ./test` from the proje
 
 ## Roadmap
 
-1.0.x
-	- Finish API: 
-		- Match
-		- Multi-Match
-		- Heroes 
-		- Items
-	- Add Error/Exception handling
+1.0.x  
+	- Finish API:   
+		- Match  
+		- Multi-Match  
+		- Heroes  
+		- Items  
+	- Add Error/Exception handling  
 
-1.1.x
-	- Add response objects:
-		- Player Statistics
-		- Hero Statistics
-		- Match History
-		- Match
-		- Hero
-		- Item
+1.1.x  
+	- Add response objects:  
+		- Player Statistics  
+		- Hero Statistics  
+		- Match History  
+		- Match  
+		- Hero  
+		- Item  
