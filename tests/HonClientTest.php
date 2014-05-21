@@ -1,5 +1,4 @@
 <?php
-require_once 'HonAPI/autoload.php';
 class HonClientTest extends PHPUnit_Framework_TestCase
 {
 	/**
