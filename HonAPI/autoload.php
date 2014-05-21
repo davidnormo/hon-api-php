@@ -11,8 +11,10 @@ function autoload($className)
 	 }
 	 $fileName .= str_replace('_', DIRECTORY_SEPARATOR, $className) . '.php';
 
-	 if(file_exists($fileName)){
+	 if(stream_resolve_include_path($fileName) !== false){
 		  require $fileName;
+	 } else {
+		throw new Exception($fileName);
 	 }
 }
 spl_autoload_register('autoload');

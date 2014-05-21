@@ -2,7 +2,7 @@
 namespace HonAPI;
 class Match extends Request
 {
-	 use PropertiesPlayer;
+	 use PropertiesPlayer, MethodStatistics;
 
 	 /**
 	  * Construct Match object
@@ -47,29 +47,11 @@ class Match extends Request
 	 }
 
 	 /**
-	  * Get match statistics
-	  */
-	 public function getStatistics()
-	 {
-		  $this->setMethod('statistics');
-		  return $this;
-	 }
-
-	 /**
 	  * Get match summary
 	  */
 	 public function getSummary()
 	 {
-		  $this->setMethod('summary');
-		  return $this;
-	 }
-
-	 /**
-	  * Get all match statistics
-	  */
-	 public function getAll()
-	 {
-		  $this->setMethod('all');
+		  $this->setMethod('summ');
 		  return $this;
 	 }
 }

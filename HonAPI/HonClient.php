@@ -53,4 +53,14 @@ class HonClient
 	 {
 		return new Match($this->token);
 	 }
+
+	 /**
+	  * Start a MultiMatch call
+	  *
+	  * @return HonAPI\MultiMatch
+	  */
+	 public function getMultiMatch()
+	 {
+		return new MultiMatch($this->token);
+	 }
 }
