@@ -1,7 +1,7 @@
 <?php
 class MethodAllTest extends PHPUnit_Framework_TestCase
 {
-	public function testGetStatistics()
+	public function testGetAll()
 	{
 		$stub = new MethodAllStub(123);
 		$stub->getAll();

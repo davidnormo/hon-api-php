@@ -12,7 +12,15 @@ $client->getPlayerStats()
 ```
 
 ## Unit Tests
-The unit tests are located in the `tests/` dir. Runing `$ ./test` from the project root directory will run the unit tests.
+Install PHPUnit using composer:
+```
+$ composer install
+```
+The unit tests are located in the `tests/` dir. Runing:
+```
+$ ./test
+```
+from the project root directory will run the unit tests.
 
 ## Roadmap
 

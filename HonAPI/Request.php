@@ -79,8 +79,23 @@ class Request
 		  //build the request URI
 		  $requestUri = $this->buildRequestUri(); 
 		  //send request, return response
-		  //return file_get_contents($requestUri);
-		  echo $requestUri;
+		  $handle = curl_init($requestUri);
+
+		  if($handle === false){
+		  		throw new \Exception('Bad url: '.$requestUri);
+		  }
+		  curl_setopt_array($handle, array(
+			   CURLOPT_HEADER => false,
+			   CURLOPT_RETURNTRANSFER => true
+	 	  ));
+
+		  $response = curl_exec($handle);
+		  if($response === false){
+			$info = curl_getinfo($handle);
+			throw new Exception('API call failed with code: '.$info['http_code']);
+		  }
+
+		  return $response;
 	 }
 
 	 /**
@@ -90,9 +105,14 @@ class Request
 	 {
 		  return $this->properties;
 	 }
-	 	
+
 	 public function getMethod()
 	 {
-		return $this->method;
+		  return $this->method;
+	 }
+
+	 public function getRequestUri()
+	 {
+		  return $this->buildRequestUri();
 	 }
 }
