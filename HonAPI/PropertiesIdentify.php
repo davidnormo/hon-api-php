@@ -4,13 +4,13 @@ trait PropertiesIdentify
 {
 	public function setName($name)
 	{
-		$this->setProperty('name', $name);
+		$this->setMethod('name/'.$name);
 		return $this;
 	}
 
 	public function setId($id)
 	{
-		$this->setProperty('id', $id);
+		$this->setMethod('id/'.$id);
 		return $this;
 	}
 }
