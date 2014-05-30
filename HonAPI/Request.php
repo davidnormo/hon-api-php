@@ -19,13 +19,21 @@ class Request
 	 }
 
 	 /**
+	  * URL Encode a string, don't encode "/"
+	  */
+	 private function urlencode($string)
+	 {
+		  return str_replace("%2F", "/", urlencode($string));
+	 }
+
+	 /**
 	  * Set the controller for this request
 	  *
 	  * @param String $controller
 	  */
 	 public function setController($controller)
 	 {
-		  $this->controller = urlencode($controller);
+		  $this->controller = $this->urlencode($controller);
 		  return $this;	 
 	 }
 
@@ -37,7 +45,7 @@ class Request
 	  */
 	 public function setMethod($method)
 	 {
-		  $this->method = urlencode($method);
+		  $this->method = $this->urlencode($method);
 		  return $this;
 	 }
 
@@ -49,7 +57,7 @@ class Request
 	  */
 	 public function setProperty($key, $value)
 	 {
-		  $this->properties[urlencode($key)] = urlencode($value);
+		  $this->properties[$this->urlencode($key)] = $this->urlencode($value);
 		  return $this;
 	 }
 
@@ -82,17 +90,17 @@ class Request
 		  $handle = curl_init($requestUri);
 
 		  if($handle === false){
-		  		throw new \Exception('Bad url: '.$requestUri);
+			   throw new \Exception('Bad url: '.$requestUri);
 		  }
 		  curl_setopt_array($handle, array(
 			   CURLOPT_HEADER => false,
 			   CURLOPT_RETURNTRANSFER => true
-	 	  ));
+		  ));
 
 		  $response = curl_exec($handle);
 		  if($response === false){
-			$info = curl_getinfo($handle);
-			throw new Exception('API call failed with code: '.$info['http_code']);
+			   $info = curl_getinfo($handle);
+			   throw new Exception('API call failed with code: '.$info['http_code']);
 		  }
 
 		  return $response;
