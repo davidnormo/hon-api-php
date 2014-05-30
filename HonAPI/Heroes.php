@@ -6,7 +6,7 @@ class Heroes extends Request
 
 	public function __construct($token)
 	{
-		parent::_construct($token);
+		parent::__construct($token);
 		$this->setController('heroes');
 		$this->setMethod('all');
 	}
