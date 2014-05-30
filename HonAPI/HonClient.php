@@ -63,4 +63,14 @@ class HonClient
 	 {
 		return new MultiMatch($this->token);
 	 }
+
+	 public function getHero()
+	 {
+		return new Heroes($this->token);
+	 }
+
+	 public function getItem()
+	 {
+		return new Items($this->token);
+	 }
 }
