@@ -24,13 +24,16 @@ from the project root directory will run the unit tests.
 
 ## Roadmap
 
-1.0.x  
+1.0.0  
   - Finish API:   
     - ~~Match~~  
     - ~~Multi-Match~~
-    - Heroes  
-    - Items  
-    - Add Error/Exception handling  
+    - ~~Heroes~~  
+    - ~~Items~~  
+    - ~~Add Error/Exception handling~~  
+    
+1.0.1
+  - Add fetchArray - decodes JSON
 
 1.1.x  
   - Add response objects:  
