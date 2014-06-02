@@ -64,13 +64,23 @@ class HonClient
 		return new MultiMatch($this->token);
 	 }
 
+	 /**
+	  * Start a Hero call
+	  *
+	  * @return HonAPI\Hero
+	  */
 	 public function getHero()
 	 {
 		return new Heroes($this->token);
 	 }
 
+	 /**
+	  * Start an Item call
+	  *
+	  * @return HonAPI\Item
+	  */
 	 public function getItem()
 	 {
-		return new Items($this->token);
+		return new Item($this->token);
 	 }
 }

@@ -1,6 +1,6 @@
 <?php
 namespace HonAPI;
-class Items extends Request
+class Item extends Request
 {
 	use PropertiesIdentify, MethodUsage;
 
