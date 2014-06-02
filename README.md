@@ -28,8 +28,8 @@ from the project root directory will run the unit tests.
   - Finish API:   
     - ~~Match~~  
     - ~~Multi-Match~~
-    - ~~Heroes~~  
-    - ~~Items~~  
+    - Heroes  
+    - Items  
     - ~~Add Error/Exception handling~~  
     
 1.0.1
